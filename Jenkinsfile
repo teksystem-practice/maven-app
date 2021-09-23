@@ -11,7 +11,7 @@ pipeline {
         stage('Build') {
             steps {
                 
-                git 'https://github.com/jglick/simple-maven-project-with-tests.git'
+                git 'https://github.com/sog2-app/maven-app.git'
 
                 
                 sh "mvn -Dmaven.test.failure.ignore=true clean package"
