@@ -1,0 +1,8 @@
+
+
+mvn clean verify sonar:sonar \
+  -Dsonar.projectKey=example \
+  -Dsonar.host.url=http://ec2-3-111-32-69.ap-south-1.compute.amazonaws.com:9000 \
+  -Dsonar.login=1734e94766a81a25191e7b0467dc6fffcb3b4e7b
+  
+docker run -it --rm -v /root/maven-app:/code -w /code maven mvn verify sonar:sonar -Dsonar.projectKey=example -Dsonar.host.url=http://ec2-3-111-32-69.ap-south-1.compute.amazonaws.com:9000 -Dsonar.login=1734e94766a81a25191e7b0467dc6fffcb3b4e7b
